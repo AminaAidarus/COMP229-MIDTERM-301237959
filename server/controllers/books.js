@@ -1,3 +1,10 @@
+/* 
+File Name: Controllers/Books.js
+Author's name: Amina Aidarus
+Student Id: 301237959
+Web App Name: Favourite Book List
+*/
+
 // define the book model
 import booksModel from '../models/books.js';
 
@@ -61,6 +68,7 @@ export function processEditPage(req, res, next) {
     let id = req.params.id;
 
     let newBook = booksModel({
+    _id: req.body.id,
     name: req.body.name,
     author: req.body.author,
     published: req.body.published,
